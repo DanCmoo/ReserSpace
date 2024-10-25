@@ -14,6 +14,7 @@ public class Space {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
+    @Column(unique = true, nullable = false)
     private String name;
     private String location;
     private int capacity;

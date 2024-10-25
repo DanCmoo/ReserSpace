@@ -13,7 +13,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(nullable = false,unique = true)
+    @Column(name = "user_id",nullable = false,unique = true)
     private UUID id;
     @Column(nullable = false,unique = true)
     private String username;
