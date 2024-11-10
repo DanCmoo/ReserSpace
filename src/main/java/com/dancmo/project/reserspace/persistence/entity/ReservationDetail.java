@@ -14,7 +14,7 @@ public class ReservationDetail {
     @Column(name = "reservation_detail_id")
     private UUID id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "reservation_id")
     private Reservation reservation;
     private String detailKey;

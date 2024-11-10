@@ -12,7 +12,6 @@ import java.util.UUID;
 public interface UserRepository extends JpaRepository<User, UUID> {
     User findByUsername(String username);
     @Modifying
-
     @Query("DELETE User u WHERE u.username= :username")
     int deleteByUsername(@Param("username") String username);
     @Modifying
